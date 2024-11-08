@@ -42,11 +42,11 @@ const propertyGroups = [
 		// Flexible boxes.
 		properties: [
 			'flex',
-			'flex-basis',
-			'flex-direction',
-			'flex-flow',
 			'flex-grow',
 			'flex-shrink',
+			'flex-basis',
+			'flex-flow',
+			'flex-direction',
 			'flex-wrap',
 			'-webkit-box-orient',
 		],
@@ -251,17 +251,51 @@ const propertyGroups = [
 			'caret-color',
 			'visibility',
 			'zoom',
+
 			'table-layout',
 			'empty-cells',
 			'caption-side',
 			'border-spacing',
 			'border-collapse',
+
 			'content',
 			'quotes',
 			'counter-reset',
 			'counter-set',
 			'counter-increment',
 			'resize',
+
+			'scroll-behaviour',
+			'scroll-snap-type',
+			'scroll-snap-align',
+			'scroll-snap-stop',
+			'scroll-padding',
+			'scroll-padding-inline',
+			'scroll-padding-inline-start',
+			'scroll-padding-inline-end',
+			'scroll-padding-block',
+			'scroll-padding-block-start',
+			'scroll-padding-block-end',
+			'scroll-padding-top',
+			'scroll-padding-right',
+			'scroll-padding-bottom',
+			'scroll-padding-left',
+			'scroll-margin',
+			'scroll-margin-inline',
+			'scroll-margin-inline-start',
+			'scroll-margin-inline-end',
+			'scroll-margin-block',
+			'scroll-margin-block-start',
+			'scroll-margin-block-end',
+			'scroll-margin-top',
+			'scroll-margin-right',
+			'scroll-margin-bottom',
+			'scroll-margin-left',
+
+			'scrollbar-color',
+			'scrollbar-gutter',
+			'scrollbar-width',
+
 			'user-select',
 			'-webkit-user-select',
 			'nav-index',
@@ -446,6 +480,19 @@ const propertyGroups = [
 			'animation-iteration-count',
 			'animation-direction',
 			'will-change',
+		],
+	},
+	{
+		/**
+		 * Paged media
+		 * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_paged_media
+		 */
+		properties: [
+			'break-before',
+			'break-inside',
+			'break-after',
+			'orphans',
+			'widows',
 		],
 	},
 ]

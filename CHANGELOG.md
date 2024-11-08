@@ -1,5 +1,61 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- Fix order of `flex-*` properties ([#386](https://github.com/stormwarning/stylelint-config-recess-order/pull/386))
+  The `flex` shorthand is followed by `-grow`, `-shrink`, and `-basis`, following the order of the shorthand property. The `flex-flow` shorthand now correctly preceeds the `-direction` and `-wrap` properties.
+
+## 5.1.0
+
+### Minor Changes
+
+- Add properties related to multi-line truncation ([#373](https://github.com/stormwarning/stylelint-config-recess-order/pull/373))  
+  Thanks [@toFrankie](https://github.com/toFrankie)!
+
+  - [`-webkit-box-orient`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient)
+  - [`-webkit-line-clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp)
+  - `line-clamp`
+
+- Add paged media properties ([#378](https://github.com/stormwarning/stylelint-config-recess-order/pull/378))
+
+  - [`break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-before)
+  - [`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
+  - [`break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)
+  - [`orphans`](https://developer.mozilla.org/en-US/docs/Web/CSS/orphans)
+  - [`widows`](https://developer.mozilla.org/en-US/docs/Web/CSS/widows)
+
+- Add `-webkit-text-fill-` and `-stroke-*` properties ([#373](https://github.com/stormwarning/stylelint-config-recess-order/pull/373))  
+  Thanks [@toFrankie](https://github.com/toFrankie)!
+
+  - [`-webkit-text-fill-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-fill-color)
+  - [`-webkit-text-stroke-*`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke)
+
+- Add `scroll-*` and `scrollbar-*` properties ([#376](https://github.com/stormwarning/stylelint-config-recess-order/pull/376))
+
+  - [`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+  - [`scroll-snap-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type)
+  - [`scroll-snap-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-align)
+  - [`scroll-snap-stop`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-stop)
+  - [`scroll-padding-*`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding)
+  - [`scroll-margin-*`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin)
+  - [`scrollbar-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color)
+  - [`scrollbar-gutter`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter)
+  - [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
+
+- Remove legacy `-ms-text-overflow` property ([#373](https://github.com/stormwarning/stylelint-config-recess-order/pull/373))  
+  Thanks [@toFrankie](https://github.com/toFrankie)!
+
+  This was useful for IE8; can be autoprefixed if required.
+
+## 5.0.1
+
+### Patch Changes
+
+- Add `groups` to package.json exports ([#369](https://github.com/stormwarning/stylelint-config-recess-order/pull/369))  
+  Thanks [@inulty-dfe](https://github.com/inulty-dfe)!
+
 ## 5.0.0
 
 ### Major Changes
@@ -27,7 +83,7 @@
 
 ### Minor Changes
 
-- Add `will-change` property to the Transitions & Animation group. ([#353](https://github.com/stormwarning/stylelint-config-recess-order/pull/353))
+- Add `will-change` property to the Transitions & Animation group ([#353](https://github.com/stormwarning/stylelint-config-recess-order/pull/353))  
   Thanks [@connor-baer](https://github.com/connor-baer)!
 
 ## 4.4.0 — 2023-11-19
@@ -105,7 +161,7 @@
 
 #### 💣 Breaking
 
-- Upgrade `stylelint-order` to v5 [#272](https://github.com/stormwarning/stylelint-config-recess-order/pull/272)  
+- Upgrade `stylelint-order` to v5 [#272](https://github.com/stormwarning/stylelint-config-recess-order/pull/272)
   [`stylelint-order`](https://github.com/hudochenkov/stylelint-order/blob/master/CHANGELOG.md#500)'s minimum supported version of Stylelint is now >=14; the
   peerDependencies of this config have been updated to match.
 
@@ -113,14 +169,14 @@
 
 #### 🎁 Added
 
-- Add `@font-face`–specific properties [#271](https://github.com/stormwarning/stylelint-config-recess-order/pull/271)  
+- Add `@font-face`–specific properties [#271](https://github.com/stormwarning/stylelint-config-recess-order/pull/271)
   `src` and [other properties](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
   pertaining to display and metrics added to the typography group
-  following the list properties.  
+  following the list properties.
   Also adds the `font-variation-settings` and `font-optical-sizing`
   OpenType properties.
-- Add `aspect-ratio` and logical properties [#257](https://github.com/stormwarning/stylelint-config-recess-order/pull/257)  
-  [CSS Logical Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) control layout based on the writing mode.  
+- Add `aspect-ratio` and logical properties [#257](https://github.com/stormwarning/stylelint-config-recess-order/pull/257)
+  [CSS Logical Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) control layout based on the writing mode.
   Thanks [@4dr1en](https://github.com/4dr1en)!
 
 ## 2.5.0 — 2021-08-15
@@ -136,11 +192,11 @@
 
 #### 🎁 Added
 
-- Add `text-decoration-*` and `text-underline-*` properties [#224](https://github.com/stormwarning/stylelint-config-recess-order/pull/224)  
+- Add `text-decoration-*` and `text-underline-*` properties [#224](https://github.com/stormwarning/stylelint-config-recess-order/pull/224)
   Order based on the [Text Decoration shorthand spec](https://drafts.csswg.org/css-text-decor-4/#text-decoration-property)  
   Thanks [@cammarin](https://github.com/cammarin)!
 - Add `overscroll-behavior` properties [#229](https://github.com/stormwarning/stylelint-config-recess-order/pull/229)
-- Add `font-variant-*` and related properties [#228](https://github.com/stormwarning/stylelint-config-recess-order/pull/228)  
+- Add `font-variant-*` and related properties [#228](https://github.com/stormwarning/stylelint-config-recess-order/pull/228)
   Order based on [`font-variant` shorthand spec](https://www.w3.org/TR/css-fonts-3/#propdef-font-variant) order.
 
 <a name="2.3.0"></a>
@@ -157,9 +213,10 @@
 
 #### 🎁 Added
 
-- Add `place-items` property [#193](https://github.com/stormwarning/stylelint-config-recess-order/issues/193)  
-  Shorthand for the `align-items` and `justify-items` properties.  
+- Add `place-items` property [#193](https://github.com/stormwarning/stylelint-config-recess-order/issues/193)
   Thanks [@sergiofontes](https://github.com/sergiofontes)!
+
+  Shorthand for the `align-items` and `justify-items` properties.
 
 <a name="2.1.0"></a>
 
@@ -167,7 +224,7 @@
 
 #### 🎁 Added
 
-- Add unprefixed `gap` properties [#166](https://github.com/stormwarning/stylelint-config-recess-order/issues/166)  
+- Add unprefixed `gap` properties [#166](https://github.com/stormwarning/stylelint-config-recess-order/issues/166)
   These are added outside of the other `grid` properties, since it is
   now used in `flex` contexts as well, but directly after `grid-gap`
   for better backwards-compatibility.
@@ -186,9 +243,9 @@
 #### ♻️ Changed
 
 - Upgrade semantic-release config [`6d3a4cd`](https://github.com/stormwarning/stylelint-config-recess-order/commit/6d3a4cd)
-- Upgrade dependencies [#101](https://github.com/stormwarning/stylelint-config-recess-order/issues/101)  
+- Upgrade dependencies [#101](https://github.com/stormwarning/stylelint-config-recess-order/issues/101)
   `stylelint-order` bumped to v4. Other internal dependencies upgraded to their latest.
-- Update CI node versions [`8ad3f0d`](https://github.com/stormwarning/stylelint-config-recess-order/commit/8ad3f0d)  
+- Update CI node versions [`8ad3f0d`](https://github.com/stormwarning/stylelint-config-recess-order/commit/8ad3f0d)
   `esm` package required for AVA to run in Node 10+.
 
 <a name="2.0.3"></a>
@@ -197,7 +254,7 @@
 
 #### ♻️ Changed
 
-- Upgrade dependencies [#70](https://github.com/stormwarning/stylelint-config-recess-order/issues/70)  
+- Upgrade dependencies [#70](https://github.com/stormwarning/stylelint-config-recess-order/issues/70)
   Bump `stylelint-order` from 2.0.0 to 3.0.1
 
 <a name="2.0.2"></a>
@@ -206,7 +263,7 @@
 
 #### ♻️ Changed
 
-- Update Stylelint to 10.0.0 [#35](https://github.com/stormwarning/stylelint-config-recess-order/issues/35)  
+- Update Stylelint to 10.0.0 [#35](https://github.com/stormwarning/stylelint-config-recess-order/issues/35)
   Also updates `peerDependency` version range.
 
 <a name="2.0.1"></a>
